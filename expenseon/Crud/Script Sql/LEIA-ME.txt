@@ -1,0 +1,1 @@
+Antes de executar o script mude a conectionstring na arquivo web.config

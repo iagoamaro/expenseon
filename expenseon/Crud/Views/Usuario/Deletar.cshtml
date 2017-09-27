@@ -1,0 +1,59 @@
+﻿@model Crud.Models.Usuario
+
+@{
+    ViewBag.Title = "Deletar usuário";
+}
+
+<h2>Deletar usuário</h2>
+
+
+<div>
+    
+        @Html.ActionLink("Cancelar", "Index")
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrupoNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrupoNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Login)
+        </dd>       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            
+        </div>
+    }
+    
+</div>
